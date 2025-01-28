@@ -1,9 +1,9 @@
-public class LebronQuote
+public class LeBronQuote
 {
     private String quote;
     private String source; // The person saying the quote
 
-    public LebronQuote(String quote, String source)
+    public LeBronQuote(String quote, String source)
     {
         this.quote = quote;
         this.source = source;
