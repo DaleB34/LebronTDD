@@ -24,4 +24,12 @@ public class LeBronQuote
     {
         return source;
     }
+
+    public void setQuote(String quote) {
+        this.quote = quote;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
 }
