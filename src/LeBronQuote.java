@@ -9,6 +9,12 @@ public class LeBronQuote
         this.source = source;
     }
 
+    public LeBronQuote()
+    {
+        quote = "";
+        source = "";
+    }
+
     public String getQuote()
     {
         return quote;
