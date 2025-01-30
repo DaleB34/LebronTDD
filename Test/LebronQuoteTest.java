@@ -20,6 +20,13 @@ class LeBronQuoteTest
         assertFalse(q.getSource().matches("(^Lebron) (James$)"));
     }
 
-
+    @Test
+    void logicalQuote()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I'm a fan of LeBron James. I'm not really a team fan; I'm just a fan of one player.");
+        assertFalse(q.getQuote().matches(".*(don't like|hate).* LeBron James.*"));
+        // "don't like" and LeBron in the same sentence💔
+    }
 
 }
