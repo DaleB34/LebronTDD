@@ -54,4 +54,12 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(basketball|NBA).*"));
     }
 
+    @Test
+    void isLore()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("The first time I stepped on an NBA court I became a businessman.");
+        assertTrue(q.getQuote().matches(".*(first time).*"));
+    }
+
 }
