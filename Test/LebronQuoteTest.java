@@ -12,4 +12,14 @@ class LeBronQuoteTest
         assertTrue(q.getSource().matches("(^LeBron) (James$)"));
     }
 
+    @Test
+    void notQuotedByBron()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setSource("Chance The Rapper");
+        assertFalse(q.getSource().matches("(^Lebron) (James$)"));
+    }
+
+
+
 }
