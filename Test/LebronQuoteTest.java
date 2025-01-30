@@ -29,4 +29,13 @@ class LeBronQuoteTest
         // "don't like" and LeBron in the same sentence💔
     }
 
+    @Test
+    void notLogicalQuote()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I don't like one-foot jumpers like LeBron James. It looks better jumping off two feet. Every time Michael Jordan jumped off two feet, it looked so much better.");
+        assertTrue(q.getQuote().matches(".*(don't like|hate).* LeBron James.*"));
+        // "don't like" and LeBron in the same sentence💔
+    }
+
 }
