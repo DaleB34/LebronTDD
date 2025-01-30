@@ -62,4 +62,12 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(first time).*"));
     }
 
+    @Test
+    void isNotLore()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I do have motivation. A lot of motivation.");
+        assertFalse(q.getQuote().matches(".*(first time).*"));
+    }
+
 }
