@@ -46,6 +46,12 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(basketball|NBA).*"));
     }
 
-
+    @Test
+    void notAboutBasketball()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I'm just a little kid from Akron");
+        assertFalse(q.getQuote().matches(".*(basketball|NBA).*"));
+    }
 
 }
