@@ -38,4 +38,14 @@ class LeBronQuoteTest
         // "don't like" or "hate" and LeBron in the same sentence💔
     }
 
+    @Test
+    void aboutBasketball()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("You know, I'm just 6'9\" and 260. And just so happen to be very good at playing the game of basketball.");
+        assertTrue(q.getQuote().matches(".*(basketball|NBA).*"));
+    }
+
+
+
 }
