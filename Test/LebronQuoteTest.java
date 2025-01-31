@@ -78,4 +78,12 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(Michael Jordan|GOAT).*"));
     }
 
+    @Test
+    void notGOATDebate()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I do have motivation. A lot of motivation." );
+        assertFalse(q.getQuote().matches(".*(Michael Jordan|GOAT).*"));
+    }
+
 }
