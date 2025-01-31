@@ -86,4 +86,20 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(Michael Jordan|GOAT).*"));
     }
 
+    @Test
+    void aboutLeBron()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("LeBron James is one of the best players in the league - and one of the best players to ever play the game.");
+        assertTrue(q.getQuote().matches(".*(LeBron James|LeBron).*"));
+    }
+
+    @Test
+    void notAboutLeBron()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("You have to be able to accept failure to get better.");
+        assertFalse(q.getQuote().matches(".*(LeBron James|LeBron).*"));
+    }
+
 }
