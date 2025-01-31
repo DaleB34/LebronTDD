@@ -70,4 +70,12 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(first time).*"));
     }
 
+    @Test
+    void GOATDebate()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("Most people, they're dug in. 'Michael Jordan is the best player, and there's nothing LeBron can do.' A lot of people dug in that LeBron is whiny and he complains, he jumped teams, he wants all the best players. And once you have your mind made up on a particular topic, there's no moving you off of that." );
+        assertTrue(q.getQuote().matches(".*(Michael Jordan|GOAT).*"));
+    }
+
 }
