@@ -116,5 +116,13 @@ class LeBronQuoteTest
         assertTrue(q.getCharacterCount().matches("[0-9]{2,}"));
     }
 
+    @Test
+    void shortQuote()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("6");
+        assertFalse(q.getCharacterCount().matches("[0-9]{2,}"));
+    }
+
     //end of characterCount tests
 }
