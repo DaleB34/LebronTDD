@@ -1,35 +1,30 @@
-public class LeBronQuote
-{
+public class LeBronQuote {
     private String quote;
-    private String source; // The person saying the quote
+    private String characterCount;
 
-    public LeBronQuote(String quote, String source)
-    {
+    public LeBronQuote(String quote, String characterCount) {
         this.quote = quote;
-        this.source = source;
+        this.characterCount = characterCount;
     }
 
-    public LeBronQuote()
-    {
+    public LeBronQuote() {
         quote = "";
-        source = "";
+        characterCount = "0";
     }
 
-    public String getQuote()
-    {
+    public String getQuote() {
         return quote;
-    }
-
-    public String getSource()
-    {
-        return source;
     }
 
     public void setQuote(String quote) {
         this.quote = quote;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public String getCharacterCount() {
+        return characterCount;
+    }
+
+    public void setCharacterCount(String characterCount) {
+        this.characterCount = characterCount;
     }
 }
