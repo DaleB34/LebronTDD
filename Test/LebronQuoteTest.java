@@ -100,6 +100,14 @@ class LeBronQuoteTest
         assertTrue(q.getCharacterCount().matches("[1-9]+"));
     }
 
+    @Test
+    void hasNoWords()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("0");
+        assertFalse(q.getCharacterCount().matches("[1-9]+"));
+    }
+
 
 
     //end of characterCount tests
