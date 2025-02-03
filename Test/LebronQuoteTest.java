@@ -130,7 +130,7 @@ class LeBronQuoteTest
         //amount of characters is even (ends with 0,2,4,6,8)
         LeBronQuote q = new LeBronQuote();
         q.setCharacterCount("6");
-        assertTrue(q.getCharacterCount().matches("(0|2|4|6|8)$"));
+        assertTrue(q.getCharacterCount().matches("[02468]$"));
     }
 
     //end of characterCount tests
