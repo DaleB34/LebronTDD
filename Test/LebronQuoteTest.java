@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LeBronQuoteTest
 {
+    //start of quote tests
     @Test
     void logicalQuote()
     {
@@ -85,5 +86,7 @@ class LeBronQuoteTest
         q.setQuote("You have to be able to accept failure to get better.");
         assertFalse(q.getQuote().matches(".*(LeBron James|LeBron).*"));
     }
+
+    //end of quote tests
 
 }
