@@ -89,4 +89,18 @@ class LeBronQuoteTest
 
     //end of quote tests
 
+
+    //start of characterCount tests
+
+    @Test
+    void hasWords()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("31");
+        assertTrue(q.getCharacterCount().matches("[1-9]+"));
+    }
+
+
+
+    //end of characterCount tests
 }
