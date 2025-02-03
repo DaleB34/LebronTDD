@@ -120,7 +120,7 @@ class LeBronQuoteTest
     void shortQuote()
     {
         LeBronQuote q = new LeBronQuote();
-        q.setCharacterCount("6");
+        q.setCharacterCount("9");
         assertFalse(q.getCharacterCount().matches("[0-9]{2,}"));
     }
 
@@ -129,7 +129,7 @@ class LeBronQuoteTest
     {
         //amount of characters is even (ends with 0,2,4,6,8)
         LeBronQuote q = new LeBronQuote();
-        q.setCharacterCount("6");
+        q.setCharacterCount("8");
         assertTrue(q.getCharacterCount().matches("[02468]$"));
     }
 
@@ -140,6 +140,15 @@ class LeBronQuoteTest
         LeBronQuote q = new LeBronQuote();
         q.setCharacterCount("33");
         assertFalse(q.getCharacterCount().matches("[02468]$"));
+    }
+
+    @Test
+    void reallyLongQuote()
+    {
+        //quote contains more than 100 characters
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("237");
+        assertTrue(q.getCharacterCount().matches("^[1-9]([0-9]{2})"));
     }
 
     //end of characterCount tests
