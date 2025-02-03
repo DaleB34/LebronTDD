@@ -133,5 +133,14 @@ class LeBronQuoteTest
         assertTrue(q.getCharacterCount().matches("[02468]$"));
     }
 
+    @Test
+    void oddCharacter()
+    {
+        //amount of characters is even (ends with 0,2,4,6,8)
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("33");
+        assertFalse(q.getCharacterCount().matches("[02468]$"));
+    }
+
     //end of characterCount tests
 }
