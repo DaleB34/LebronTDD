@@ -160,5 +160,14 @@ class LeBronQuoteTest
         assertFalse(q.getCharacterCount().matches("^[1-9]([0-9]{2})"));
     }
 
+    @Test
+    void repeatingNumbers()
+    {
+        //Number is full of the same number e.g. 111 22 333 444, but not 112 331 131 etc.
+        LeBronQuote q = new LeBronQuote();
+        q.setCharacterCount("1191");
+        assertTrue(q.getCharacterCount().matches(q.getCharacterCount().charAt(0) + "{2,}"));
+    }
+
     //end of characterCount tests
 }
