@@ -107,6 +107,15 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(Bo Jackson).*"));
     }
 
+    @Test
+    void aboutEducation()
+    {
+        //education is a very common topic that Bo Jackson would talk about, but some may not want to see those quotes
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I also tell them that your education can take you way farther than a football, baseball, track, or basketball will - that's just the bottom line.");
+        assertTrue(q.getQuote().matches(".*(education|college).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
