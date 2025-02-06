@@ -89,6 +89,20 @@ class LeBronQuoteTest
 
     //end of quote tests
 
+    //start of quote tests relating to Bo Jackson, famous football AND baseball player
+
+    @Test
+    void aboutBoJackson()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("Set your goals high, and don't stop till you get there. -Bo Jackson");
+        assertTrue(q.getQuote().matches(".*(Bo Jackson).*"));
+    }
+
+
+
+    //end of quote tests relating to Bo Jackson
+
 
     //start of characterCount tests
 
