@@ -92,7 +92,7 @@ class LeBronQuoteTest
     //start of quote tests relating to Bo Jackson, famous football AND baseball player
 
     @Test
-    void byBoJackson()
+    void aboutBoJackson()
     {
         LeBronQuote q = new LeBronQuote();
         q.setQuote("Set your goals high, and don't stop till you get there. -Bo Jackson");
@@ -100,7 +100,7 @@ class LeBronQuoteTest
     }
 
     @Test
-    void notByBoJackson()
+    void notAboutBoJackson()
     {
         LeBronQuote q = new LeBronQuote();
         q.setQuote("You have to be able to accept failure to get better. -LeBron James");
