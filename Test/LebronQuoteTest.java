@@ -99,6 +99,14 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(Bo Jackson).*"));
     }
 
+    @Test
+    void notAboutBoJackson()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("You have to be able to accept failure to get better. -LeBron James");
+        assertFalse(q.getQuote().matches(".*(Bo Jackson).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
