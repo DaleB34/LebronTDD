@@ -112,8 +112,17 @@ class LeBronQuoteTest
     {
         //education is a very common topic that Bo Jackson would talk about, but some may not want to see those quotes
         LeBronQuote q = new LeBronQuote();
-        q.setQuote("I also tell them that your education can take you way farther than a football, baseball, track, or basketball will - that's just the bottom line.");
+        q.setQuote("I also tell them that your education can take you way farther than a football, baseball, track, or basketball will - that's just the bottom line. -Bo Jackson");
         assertTrue(q.getQuote().matches(".*(education|college).*"));
+    }
+
+    @Test
+    void notAboutEducation()
+    {
+        //education is a very common topic that Bo Jackson would talk about, but some may not want to see those quotes
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I always wanted to be a pilot. -Bo Jackson");
+        assertFalse(q.getQuote().matches(".*(education|college).*"));
     }
 
 
