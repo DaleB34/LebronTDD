@@ -149,6 +149,14 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(you).*"));
     }
 
+    @Test
+    void isNotInspirational()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("As a 9th grader, I competed with the high school kids and out of 600 people, I finished 10th. -Bo Jackson");
+        assertFalse(q.getQuote().matches(".*(you).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
