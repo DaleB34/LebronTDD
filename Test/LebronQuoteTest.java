@@ -130,7 +130,15 @@ class LeBronQuoteTest
     {
         LeBronQuote q = new LeBronQuote();
         q.setQuote("In baseball, I was a pitcher, which I hated because there was no action there. -Bo Jackson");
-        assertTrue(q.getQuote().matches(".*(ball|sports|athlete).*"));
+        assertTrue(q.getQuote().matches(".*(ball|sport|athlete).*"));
+    }
+
+    @Test
+    void notAboutSports()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I would say my greatest achievement in life right now - my greatest achievement period is - and I'm still trying to achieve it - is to be a wonderful father to my kids. -Bo Jackson");
+        assertFalse(q.getQuote().matches(".*(ball|sport|athlete).*"));
     }
 
 
