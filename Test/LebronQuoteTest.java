@@ -125,6 +125,14 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(education|college).*"));
     }
 
+    @Test
+    void aboutSports()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("In baseball, I was a pitcher, which I hated because there was no action there. -Bo Jackson");
+        assertTrue(q.getQuote().matches(".*(ball|sports|athlete).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
