@@ -141,6 +141,14 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(ball|sport|athlete).*"));
     }
 
+    @Test
+    void isInspirational()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("If you have four years to complete your college education, do it. -Bo Jackson");
+        assertTrue(q.getQuote().matches(".*(you).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
