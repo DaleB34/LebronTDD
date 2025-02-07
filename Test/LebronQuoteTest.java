@@ -157,6 +157,14 @@ class LeBronQuoteTest
         assertFalse(q.getQuote().matches(".*(you).*"));
     }
 
+    @Test
+    void aboutBaseball()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("So, baseball is probably more physical of the two mentally. -Bo Jackson");
+        assertTrue(q.getQuote().matches(".*(baseball).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
