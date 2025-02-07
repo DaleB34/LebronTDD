@@ -165,6 +165,14 @@ class LeBronQuoteTest
         assertTrue(q.getQuote().matches(".*(baseball).*"));
     }
 
+    @Test
+    void notAboutBaseball()
+    {
+        LeBronQuote q = new LeBronQuote();
+        q.setQuote("I always wanted to be a pilot -Bo Jackson");
+        assertFalse(q.getQuote().matches(".*(baseball).*"));
+    }
+
 
 
     //end of quote tests relating to Bo Jackson
